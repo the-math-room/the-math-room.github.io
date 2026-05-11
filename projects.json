@@ -8,6 +8,12 @@
       "description": "Scaffolded printable worksheets for Integrated Math.",
       "url": "./math-worksheets/",
       "tags": ["math", "teaching", "printable"]
+    },
+    {
+      "title": "Math Practice Tests",
+      "description": "Practice Tests for Integrated Math.",
+      "url": "./practice-tests/",
+      "tags": ["math", "teaching", "web first"]
     }
   ]
 }
