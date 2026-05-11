@@ -1,0 +1,13 @@
+{
+  "pageTitle": "Projects",
+  "title": "Projects",
+  "subtitle": "A collection of classroom tools and web projects.",
+  "projects": [
+    {
+      "title": "Math Worksheets",
+      "description": "Scaffolded printable worksheets for Integrated Math.",
+      "url": "./math-worksheets/",
+      "tags": ["math", "teaching", "printable"]
+    }
+  ]
+}
