@@ -14,6 +14,12 @@
       "description": "Practice Tests for Integrated Math.",
       "url": "./practice-tests/",
       "tags": ["math", "teaching", "web first"]
+    },
+    {
+      "title": "Dice Statistics Simulator",
+      "description": "An interactive probability distribution tool that tracks real-time roll frequencies, five-number summaries, and standard deviations via multi-threaded background workers.",
+      "url": "./dice_sim/",
+      "tags": ["math", "statistics", "interactive", "web first"]
     }
   ]
 }
