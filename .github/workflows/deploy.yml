@@ -1,0 +1,48 @@
+name: Deploy Portfolio with Testing Gate
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  test-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install Project Testing Frameworks
+        run: npm ci
+
+      # The Gatekeeper: If any test in specs/ fails, the pipeline freezes here!
+      - name: Execute Vitest Core Infrastructure Specs
+        run: npm test
+
+      - name: Configure GitHub Pages Static Assets
+        uses: actions/configure-pages@v5
+
+      - name: Package Workspace Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Deploys the root directory containing your vanilla index.html
+
+      - name: Deploy Live to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
