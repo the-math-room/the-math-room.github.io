@@ -1,2 +1,77 @@
-.vscode/
+# ==========================================================================
+# 1. System & OS Overlord Files (The invisible trash)
+# ==========================================================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ==========================================================================
+# 2. Package Management & Runtime (Never commit dependencies)
+# ==========================================================================
+node_modules/
+jspm_packages/
+web_modules/
+
+# Logs & Debug dumps
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================================================
+# 3. Testing Infrastructure (Vitest & Coverage)
+# ==========================================================================
+.vitest/
+.nyc_output/
+coverage/
+html-report/
+
+# ==========================================================================
+# 4. Local Environment Secrets (Protect your credentials)
+# ==========================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# ==========================================================================
+# 5. IDEs, Editors & Tooling Caches
+# ==========================================================================
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.history/
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+*.iws
+
+# Compilation & Cache directories
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache
+.turbo/
+
+# ==========================================================================
+# 6. Future Proofing 
+# ==========================================================================
+dist/
+build/
+out/
+.production/
+.vite/
